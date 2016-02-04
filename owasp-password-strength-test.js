@@ -42,21 +42,21 @@
         // enforce a minimum length
         function(password) {
           if (password.length < owasp.configs.minLength) {
-            return 'The password must be at least ' + owasp.configs.minLength + ' characters long.';
+            return 'Het wachtwoord moet minimaal ' + owasp.configs.minLength + ' tekens lang zijn';
           }
         },
 
         // enforce a maximum length
         function(password) {
           if (password.length > owasp.configs.maxLength) {
-            return 'The password must be fewer than ' + owasp.configs.maxLength + ' characters.';
+            return 'Het wachtwoord moet kleiner dan ' + owasp.configs.maxLength + ' tekens zijn.';
           }
         },
 
         // forbid repeating characters
         function(password) {
           if (/(.)\1{2,}/.test(password)) {
-            return 'The password may not contain sequences of three or more repeated characters.';
+            return 'Het wachtwoord mag geen reeksen van drie of meer herhaalde tekens bevatten.';
           }
         },
 
@@ -76,28 +76,28 @@
         // require at least one lowercase letter
         function(password) {
           if (!/[a-z]/.test(password)) {
-            return 'The password must contain at least one lowercase letter.';
+            return 'Het wachtwoord moet ten minste één kleine letter bevatten.';
           }
         },
 
         // require at least one uppercase letter
         function(password) {
           if (!/[A-Z]/.test(password)) {
-            return 'The password must contain at least one uppercase letter.';
+            return 'Het wachtwoord moet ten minste één hoofdletter bevatten.';
           }
         },
 
         // require at least one number
         function(password) {
           if (!/[0-9]/.test(password)) {
-            return 'The password must contain at least one number.';
+            return 'Het wachtwoord moet ten minste één cijfer bevatten.';
           }
         },
 
         // require at least one special character
         function(password) {
           if (!/[^A-Za-z0-9]/.test(password)) {
-            return 'The password must contain at least one special character.';
+            return 'Het wachtwoord moet ten minste één speciaal teken bevatten.';
           }
         },
 
